@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapnil Gavade | Computational Neuroscientist & Bioinformatics Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #0f766e;
+            --accent: #0891b2;
+            --dark: #0f172a;
+            --dark-blue: #1e293b;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--gray-50);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 80px 0 60px;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .header-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .meta-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .meta-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--dark);
+            font-family: 'Merriweather', serif;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            max-width: 700px;
+        }
+
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 48px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .about-text {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .expertise-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .expertise-card {
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .expertise-card h3 {
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .expertise-card p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Research Projects Section */
+        .project-showcase {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 48px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 48px;
+        }
+
+        .project-header h3 {
+            font-size: 1.875rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 0.9375rem;
+            opacity: 0.95;
+            flex-wrap: wrap;
+        }
+
+        .project-body {
+            padding: 48px;
+        }
+
+        .project-overview {
+            margin-bottom: 40px;
+        }
+
+        .project-overview h4 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .project-overview p {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .project-highlights {
+            background: var(--gray-50);
+            padding: 32px;
+            border-radius: 8px;
+            margin: 32px 0;
+        }
+
+        .project-highlights h4 {
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .project-highlights ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .project-highlights li {
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .project-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .methodology-section {
+            margin: 40px 0;
+        }
+
+        .methodology-section h4 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .method-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .method-card h5 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .method-card p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .figure-showcase {
+            margin: 40px 0;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .figure-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .figure-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .figure-caption {
+            padding: 20px;
+        }
+
+        .figure-caption h5 {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .figure-caption p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            margin-top: 32px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: 8px;
+        }
+
+        .tech-stack h5 {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            padding: 6px 14px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* Publications */
+        .publications-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .publication-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+
+        .publication-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .publication-card.featured {
+            border-left: 4px solid var(--primary);
+        }
+
+        .publication-year {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .publication-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .publication-journal {
+            font-weight: 500;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-size: 0.9375rem;
+        }
+
+        .publication-abstract {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .pub-tag {
+            padding: 4px 12px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            font-size: 0.8125rem;
+            color: var(--text-primary);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skill-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Experience */
+        .experience-list {
+            display: grid;
+            gap: 32px;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .experience-item h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .experience-role {
+            font-size: 1.125rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .experience-date {
+            font-family: 'IBM Plex Mono', monospace;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+        }
+
+        .experience-item li {
+            padding: 6px 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 24px;
+            line-height: 1.7;
+            font-size: 0.9375rem;
+        }
+
+        .experience-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            padding: 48px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        footer p {
+            font-size: 0.9375rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2.5rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .project-body, .about-content {
+                padding: 32px 24px;
+            }
+
+            nav ul {
+                gap: 24px;
+                padding: 16px 20px;
+            }
+        }
+
+        /* Utilities */
+        .mb-4 { margin-bottom: 24px; }
+        .mt-8 { margin-top: 48px; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">Swapnil Gavade</h1>
+            <div class="header-subtitle">Computational Neuroscientist & Bioinformatics Specialist</div>
+            <p class="header-description">
+                Research data scientist at the intersection of data science and bioinformatics, helping research teams develop computational infrastructure and analytics solutions for complex biological systems. Specializing in neural activity analysis, multi-omics integration, and scalable HPC pipelines.
+            </p>
+            <div class="header-meta">
+                <div class="meta-item">
+                    📧 <a href="mailto:swapnil.gavade@outlook.com">swapnil.gavade@outlook.com</a>
+                </div>
+                <div class="meta-item">
+                    📱 <a href="tel:+13129185286">(312) 918-5286</a>
+                </div>
+                <div class="meta-item">
+                    🔗 <a href="https://www.linkedin.com/in/swapnilgavade/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="meta-item">
+                    🎓 <a href="https://scholar.google.com/citations?user=DrnIECIAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Research Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">Building computational infrastructure for cutting-edge neuroscience research</p>
+            
+            <div class="about-content">
+                <p class="about-text">
+                    I am a research data scientist with over 7 years of experience at the intersection of data science and bioinformatics. I help research teams develop computational infrastructure and analytics solutions that enable groundbreaking discoveries in neuroscience, genomics, and biomedical research.
+                </p>
+                <p class="about-text">
+                    My work focuses on building scalable analysis pipelines for multimodal datasets, including in vivo calcium imaging, bulk and single-cell RNA-seq, spatial transcriptomics, and behavioral data. I leverage AI/ML approaches, high-dimensional statistical modeling, and HPC systems to extract interpretable insights that inform experimental design and advance our understanding of brain function.
+                </p>
+                <p class="about-text">
+                    I thrive in collaborative, interdisciplinary environments and have a proven track record of translating biological questions into computational frameworks, mentoring teams on best practices, and delivering reproducible research that drives scientific impact.
+                </p>
+
+                <div class="expertise-areas">
+                    <div class="expertise-card">
+                        <h3>Computational Infrastructure</h3>
+                        <p>Design and optimize HPC-based analysis pipelines, reducing processing time by 40% while cutting costs and ensuring reproducibility</p>
+                    </div>
+                    <div class="expertise-card">
+                        <h3>Bioinformatics Solutions</h3>
+                        <p>Develop end-to-end workflows for RNA-seq, spatial transcriptomics, and multi-omics integration with neural and behavioral data</p>
+                    </div>
+                    <div class="expertise-card">
+                        <h3>Analytics & AI/ML</h3>
+                        <p>Build predictive models and neural decoders using deep learning, improving accuracy by 25% for behavioral state classification</p>
+                    </div>
+                    <div class="expertise-card">
+                        <h3>Team Collaboration</h3>
+                        <p>Lead cross-functional teams, mentor researchers on computational methods, and secure $500K+ in research funding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Research Projects</h2>
+            <p class="section-subtitle">Computational approaches to decode neural mechanisms of behavior</p>
+
+            <!-- Project 1: Neural Decoding -->
+            <div class="project-showcase">
+                <div class="project-header">
+                    <h3>Neural Activity Decoding of Exploratory Behavior</h3>
+                    <div class="project-meta">
+                        <span>Michigan Neuroscience Institute</span>
+                        <span>•</span>
+                        <span>2020-2024</span>
+                        <span>•</span>
+                        <span>Published: eNeuro 2022</span>
+                    </div>
+                </div>
+                
+                <div class="project-body">
+                    <div class="project-overview">
+                        <h4>Project Overview</h4>
+                        <p>
+                            Developed AI/ML pipelines to decode behavioral states from hippocampal CA1 neural activity during object exploration in freely-moving mice. Combined in vivo calcium imaging (1-photon, Inscopix) with behavioral tracking to investigate how stress hormone receptors alter neural encoding patterns.
+                        </p>
+                        <p>
+                            This project required building end-to-end computational infrastructure from raw imaging data processing through advanced neural decoding models, resulting in novel insights into how glucocorticoid signaling modulates hippocampal representations of exploration.
+                        </p>
+                    </div>
+
+                    <div class="project-highlights">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Achieved 84.7% accuracy in decoding exploratory states using neural activity, improving upon baseline by 25%</li>
+                            <li>Implemented time-resolved decoding framework revealing temporal dynamics of neural population coding</li>
+                            <li>Developed causal window analysis demonstrating that recent neural history predicts current exploration state</li>
+                            <li>Created reproducible analysis pipeline processing 100+ hours of simultaneous neural-behavioral data</li>
+                            <li>Integrated molecular (RNA-seq), neural (calcium imaging), and behavioral datasets to identify multi-level mechanisms</li>
+                        </ul>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h4>Computational Methods & Pipeline</h4>
+                        <div class="method-grid">
+                            <div class="method-card">
+                                <h5>Image Processing Pipeline</h5>
+                                <p>Motion correction (NoRMCorre), source extraction (CNMF-E), and deconvolution (OASIS) algorithms for calcium imaging cell registration and calcium trace extraction from raw video data</p>
+                            </div>
+                            <div class="method-card">
+                                <h5>Behavioral Analysis</h5>
+                                <p>Automated tracking and classification of exploration periods with frame-by-frame synchronization to neural data using custom Python pipelines</p>
+                            </div>
+                            <div class="method-card">
+                                <h5>Machine Learning Models</h5>
+                                <p>Compared classical (Logistic Regression, SVM, Random Forest) vs. deep learning approaches (MLP, GRU) for neural decoding, with ROC/AUC performance evaluation</p>
+                            </div>
+                            <div class="method-card">
+                                <h5>Temporal Decoding Framework</h5>
+                                <p>Implemented instantaneous, causal window, and non-causal window decoding to assess temporal integration properties of neural population codes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="figure-showcase">
+                        <h4>Research Findings</h4>
+                        <div class="figure-grid">
+                            <div class="figure-item">
+                                <img src="./decoding2.png" alt="Neural Decoding Performance">
+                                <div class="figure-caption">
+                                    <h5>Time-Resolved Exploration Decoding</h5>
+                                    <p>Instantaneous frame-by-frame decoding shows that neural population activity reliably predicts exploration states throughout behavioral sessions, with model predictions aligned to true exploration periods.</p>
+                                </div>
+                            </div>
+                            <div class="figure-item">
+                                <img src="./decodingpng.png" alt="Temporal Integration Analysis">
+                                <div class="figure-caption">
+                                    <h5>Temporal Integration Across Decoding Windows</h5>
+                                    <p>Accuracy increases from 56.8% (instantaneous) to 78.6% (causal window) to 84.7% (non-causal window), revealing that neural ensembles integrate information across time to encode exploration.</p>
+                                </div>
+                            </div>
+                            <div class="figure-item">
+                                <img src="./models.png" alt="Model Comparison">
+                                <div class="figure-caption">
+                                    <h5>Classical vs. Deep Learning Decoders</h5>
+                                    <p>ROC analysis comparing multiple algorithms shows that deep learning models (GRU: AUC=0.831, MLP: AUC=0.752) outperform classical approaches (Logistic Regression: AUC=0.738), demonstrating value of neural networks for complex temporal patterns.</p>
+                                </div>
+                            </div>
+                            <div class="figure-item">
+                                <img src="./pipelin.png" alt="Processing Pipeline">
+                                <div class="figure-caption">
+                                    <h5>Calcium Imaging Processing Pipeline</h5>
+                                    <p>End-to-end workflow from raw calcium imaging video through motion correction, source separation, and calcium trace extraction, ensuring high-quality neural activity data for downstream analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Technologies & Tools</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">CaImAn</span>
+                            <span class="tech-tag">NoRMCorre</span>
+                            <span class="tech-tag">CNMF-E</span>
+                            <span class="tech-tag">OASIS</span>
+                            <span class="tech-tag">Inscopix</span>
+                            <span class="tech-tag">HPC/SLURM</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="project-highlights mt-8">
+                        <h4>Scientific Impact</h4>
+                        <ul>
+                            <li>First-author publication in eNeuro (2022), demonstrating altered behavioral encoding in transgenic mice</li>
+                            <li>Revealed that glucocorticoid receptor overexpression changes how hippocampal neurons represent exploration</li>
+                            <li>Methods and pipelines adopted by collaborators for ongoing studies in neuroimmunology and stress</li>
+                            <li>Findings inform therapeutic strategies for stress-related cognitive disorders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <p class="section-subtitle">Peer-reviewed research advancing computational neuroscience and bioinformatics</p>
+
+            <div class="publications-grid">
+                <div class="publication-card featured">
+                    <div class="publication-year">2022 • FIRST AUTHOR</div>
+                    <h3 class="publication-title">Forebrain Glucocorticoid Receptor Overexpression Alters Behavioral Encoding of Hippocampal CA1 Pyramidal Cells in Mice</h3>
+                    <div class="publication-authors">Gavade, Swapnil et al.</div>
+                    <div class="publication-journal">eNeuro, 9(6): ENEURO.0126-22.2022</div>
+                    <p class="publication-abstract">
+                        Integrated in vivo calcium imaging and behavioral analysis to demonstrate how altered glucocorticoid receptor expression affects neural encoding in hippocampal CA1 pyramidal cells during object exploration. Combined AI/ML approaches with neural recording to decode behavioral representations, achieving 84.7% accuracy with temporal integration models.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Calcium Imaging</span>
+                        <span class="pub-tag">Machine Learning</span>
+                        <span class="pub-tag">Neural Encoding</span>
+                        <span class="pub-tag">Hippocampus</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2025 • In Revision</div>
+                    <h3 class="publication-title">Lipocalin-2 perpetuates post-infectious neuroinflammation and anxiety-like behavior</h3>
+                    <div class="publication-authors">Shany Yang et al.</div>
+                    <div class="publication-journal">Under Review</div>
+                    <p class="publication-abstract">
+                        Investigation of molecular mechanisms driving persistent neuroinflammation and behavioral changes following infection, with focus on lipocalin-2 as a key mediator.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Neuroinflammation</span>
+                        <span class="pub-tag">Behavior</span>
+                        <span class="pub-tag">RNA-seq</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2025</div>
+                    <h3 class="publication-title">Ventral subiculum control of avoidance behavior and HPA axis reactivity via the bed nucleus of the stria terminalis</h3>
+                    <div class="publication-authors">Jena S. Marah et al.</div>
+                    <div class="publication-journal">Psychoneuroendocrinology, 171: 107229</div>
+                    <p class="publication-abstract">
+                        Examining sex-specific neural circuit mechanisms controlling stress responses and avoidance behavior through ventral subiculum-BNST pathways in mice.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Neural Circuits</span>
+                        <span class="pub-tag">Stress</span>
+                        <span class="pub-tag">Sex Differences</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2024</div>
+                    <h3 class="publication-title">Corticosteroid treatment during sepsis alters hippocampal function in male and female survivors</h3>
+                    <div class="publication-authors">Alice Hill et al.</div>
+                    <div class="publication-journal">Biological Psychiatry Global Open Science, 4(1): 336–345</div>
+                    <p class="publication-abstract">
+                        Analysis of how corticosteroid treatment during sepsis impacts long-term hippocampal function and cognitive outcomes in survivors, with sex-specific considerations.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Hippocampus</span>
+                        <span class="pub-tag">Cognition</span>
+                        <span class="pub-tag">Clinical</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2023</div>
+                    <h3 class="publication-title">Corticosterone enhances formation of non-fear but not fear memory during infectious illness</h3>
+                    <div class="publication-authors">Alice Hill et al.</div>
+                    <div class="publication-journal">Frontiers in Behavioral Neuroscience, 17: 1144173</div>
+                    <p class="publication-abstract">
+                        Investigating differential effects of stress hormones on memory formation during illness, revealing specificity for non-fear versus fear-based learning paradigms.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Memory</span>
+                        <span class="pub-tag">Stress Hormones</span>
+                        <span class="pub-tag">Behavior</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2018</div>
+                    <h3 class="publication-title">Translating emotional insights from hospitality employees' comments: Using sentiment analysis to understand job satisfaction</h3>
+                    <div class="publication-authors">Thomas Lisa, Gavade Swapnil</div>
+                    <div class="publication-journal">International Hospitality Review, 32(1): 75–92</div>
+                    <p class="publication-abstract">
+                        Applied NLP and sentiment analysis techniques to multilingual employee surveys, extracting emotional patterns and actionable insights for organizational improvement.
+                    </p>
+                    <div class="publication-tags">
+                        <span class="pub-tag">NLP</span>
+                        <span class="pub-tag">Sentiment Analysis</span>
+                        <span class="pub-tag">Data Science</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="https://scholar.google.com/citations?user=DrnIECIAAAAJ&hl=en" 
+                   target="_blank" 
+                   style="display: inline-block; padding: 14px 32px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">
+                    View Full Publication List on Google Scholar →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Comprehensive expertise in computational neuroscience and bioinformatics</p>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Neuroscience Methods</h3>
+                    <ul class="skill-list">
+                        <li>In vivo Calcium Imaging (1-photon, Inscopix)</li>
+                        <li>Bulk & Single-cell RNA-seq</li>
+                        <li>Spatial Transcriptomics</li>
+                        <li>Activity-Dependent Gene Expression (c-Fos)</li>
+                        <li>Behavioral Assays & Tracking</li>
+                        <li>Multi-omics Data Integration</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul class="skill-list">
+                        <li>Deep Learning (PyTorch, TensorFlow)</li>
+                        <li>Supervised/Unsupervised Learning</li>
+                        <li>Neural Decoders & Classification</li>
+                        <li>Dimensionality Reduction (PCA, t-SNE)</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision (OpenCV)</li>
+                        <li>GenAI & LLM Fine-tuning</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming & Infrastructure</h3>
+                    <ul class="skill-list">
+                        <li>Python (NumPy, Pandas, SciPy, Scikit-learn)</li>
+                        <li>R (Bioconductor, tidyverse, ggplot2)</li>
+                        <li>SQL (MySQL, SQL Server)</li>
+                        <li>HPC Clusters (SLURM)</li>
+                        <li>Docker & Containerization</li>
+                        <li>Git Version Control</li>
+                        <li>Linux/Unix Systems</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Statistical Analysis</h3>
+                    <ul class="skill-list">
+                        <li>High-dimensional Statistical Modeling</li>
+                        <li>Time-Series Analysis</li>
+                        <li>Multilevel/Mixed-Effects Models</li>
+                        <li>Causal Inference</li>
+                        <li>Mediation Analysis</li>
+                        <li>Survival Analysis</li>
+                        <li>Bayesian Methods</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Data Engineering</h3>
+                    <ul class="skill-list">
+                        <li>Pipeline Development & Automation</li>
+                        <li>ETL Workflows</li>
+                        <li>Database Design & Management</li>
+                        <li>Cloud Computing (HPC)</li>
+                        <li>Data Quality & Validation</li>
+                        <li>Reproducible Research Workflows</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Visualization & Communication</h3>
+                    <ul class="skill-list">
+                        <li>Interactive Dashboards (Plotly, Shiny)</li>
+                        <li>Scientific Visualization (ggplot2, Matplotlib)</li>
+                        <li>Tableau</li>
+                        <li>Scientific Writing & Publication</li>
+                        <li>Conference Presentations</li>
+                        <li>Grant Writing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">Leading computational infrastructure development and analytics for neuroscience research</p>
+
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Michigan Neuroscience Institute, Michigan Medicine</h3>
+                    <div class="experience-role">Research Data Scientist</div>
+                    <div class="experience-date">August 2020 - Present | Ann Arbor, MI</div>
+                    <ul>
+                        <li>Build computational infrastructure and analytics solutions for multimodal neuroscience datasets (neural imaging, RNA-seq, behavioral data)</li>
+                        <li>Designed and executed experiments combining in vivo calcium imaging (Inscopix) with behavioral assays using Python-based pipelines</li>
+                        <li>Developed AI/ML neural decoding models improving accuracy by 25% for behavioral state classification</li>
+                        <li>Conducted bulk RNA-seq analyses integrating transcriptomic data with neural and behavioral datasets</li>
+                        <li>Optimized HPC infrastructure reducing processing time by 40% and cutting computing costs by $10K</li>
+                        <li>Led cross-functional team of 5 research scientists, mentoring on computational methods and reproducible workflows</li>
+                        <li>Secured $500K+ in research funding through grant writing and comprehensive analysis plans</li>
+                        <li>Created interactive dashboards and visualizations for exploratory analysis and collaborative decision-making</li>
+                        <li>Led data analysis plans for longitudinal clinical study under HIPAA/IRB with database design for patient data management</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>University of Michigan</h3>
+                    <div class="experience-role">Research Data Analyst - Complex Systems</div>
+                    <div class="experience-date">March 2018 - August 2020 | Ann Arbor, MI</div>
+                    <ul>
+                        <li>Analyzed 25 million user records using generalized linear models, clustering, and interactive visualizations (R, Python)</li>
+                        <li>Designed NLP pipeline for data de-identification ensuring privacy compliance and regulatory standards</li>
+                        <li>Transformed unstructured datasets into MySQL relational databases, reducing processing time by 50%</li>
+                        <li>Generated actionable insights into user behavior and network structures using advanced statistical modeling</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>DePaul University</h3>
+                    <div class="experience-role">Research Data Analyst</div>
+                    <div class="experience-date">September 2016 - March 2018 | Chicago, IL</div>
+                    <ul>
+                        <li>Developed NLP sentiment analysis project for multilingual employee satisfaction surveys</li>
+                        <li>Identified emotional patterns and attitudes using R and Tableau for U.S. hospitality organizations</li>
+                        <li>Delivered actionable insights driving improvements in employee satisfaction and organizational outcomes</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Presence Health</h3>
+                    <div class="experience-role">Data Analytics & Machine Learning Intern</div>
+                    <div class="experience-date">June 2016 - August 2016 | Chicago, IL</div>
+                    <ul>
+                        <li>Analyzed 500K+ electronic healthcare records under HIPAA regulations using time-series analysis and clustering</li>
+                        <li>Developed time-series forecasting models and interactive ShinyUI dashboards for health outcome visualization</li>
+                        <li>Created patient matching algorithm improving cross-institutional healthcare collaboration and data collection efficiency</li>
+                        <li>Contributed to 15% improvement in targeted healthcare outcomes across Illinois communities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Swapnil Gavade | Computational Neuroscientist & Bioinformatics Specialist</p>
+            <p style="margin-top: 12px; opacity: 0.8;">Building computational infrastructure for neuroscience research</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
