@@ -611,8 +611,8 @@ var PROJECTS = {
     title:'Neural Decoding &amp; Behavioral Prediction',
     role:'Michigan Neuroscience Institute, University of Michigan · 2020–Present',
     visBg:'vis-neural',
-    overview:'Built a full end-to-end scalable ML pipeline for decoding neural activity from hippocampal CA1 pyramidal cells recorded via in vivo microendoscopic calcium imaging. The pipeline processes over 50,000 time frames with 600+ features per session to classify behavioral states including exploration, mobility, and spatial navigation — and automates prediction workflows across experimental cohorts.',
-    methods:['Microendoscopic Calcium Imaging','Supervised Classification','Random Forest · XGBoost','PyTorch · Scikit-learn','Time-series Feature Engineering','TIFF Stack Processing (30–50GB)','Cross-validation · ROC-AUC','Python · NumPy · Pandas'],
+    overview:'Built a full end-to-end scalable ML pipeline for decoding neural activity from hippocampal CA1 pyramidal cells recorded via in vivo miniscope calcium imaging. The pipeline processes over 50,000 time frames with 600+ features per session to classify behavioral states including exploration, mobility, and spatial navigation — and automates prediction workflows across experimental cohorts.',
+    methods:['Miniscope Calcium Imaging','Supervised Classification','SVM','PyTorch · Scikit-learn','Time-series Feature Engineering','TIFF Stack Processing (30–50GB)','Cross-validation · ROC-AUC','Python · NumPy · Pandas'],
     contribution:'Designed the entire computational pipeline from raw TIFF ingestion through signal extraction, feature engineering, model training, and behavioral classification. Built an interactive dashboard with real-time video synchronization enabling researchers to interactively select cells and export results — cutting workflow time by 70%.',
     pub:{journal:'eNeuro · 2022',title:'Forebrain Glucocorticoid Receptor Overexpression Alters Behavioral Encoding of Hippocampal CA1 Pyramidal Cells in Mice',authors:'Gavade S, Wei Q, Johnston C, Kounelis-Wuillaume S, et al. · doi:10.1523/ENEURO.0126-22.2022'},
     metrics:['600+ features','50K+ time frames','70% workflow reduction','Python · PyTorch']
@@ -631,9 +631,9 @@ var PROJECTS = {
   genai: {
     tag:'Generative AI · NLP · Research Infrastructure',
     title:'GenAI Research Knowledge Base',
-    role:'Michigan Neuroscience Institute · 2023–Present',
+    role:'Michigan Neuroscience Institute · 2020–Present',
     visBg:'vis-genai',
-    overview:'Designed and built a Retrieval-Augmented Generation (RAG) system fine-tuned on a large corpus of medical and neuroscience research literature. The system enables semantic search, cross-paper synthesis, and automated note generation — allowing research teams to query across hundreds of papers using natural language and receive grounded, cited responses.',
+    overview:'Designed and built a note retrieval system fine-tuned on a large corpus of medical and neuroscience research literature. The system enables semantic search, cross-paper synthesis, and automated note generation — allowing research teams to query across hundreds of papers using natural language and receive grounded, cited responses.',
     methods:['Llama 3.2 (1B parameter)','Fine-tuning on domain corpus','RAG Architecture','Vector Embeddings','Semantic Similarity Search','Prompt Engineering','LangChain · HuggingFace','Python · PyTorch'],
     contribution:'Led the full system design: corpus curation, chunking strategy, embedding pipeline, vector store setup, and fine-tuning of Llama 3.2 on neuroscience and medical research texts. Integrated the retrieval system with a simple research-team-facing interface for query and note generation.',
     pub:null,
@@ -810,7 +810,7 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
           <div class="contact-link-icon">@</div>
           <div>
             <div class="contact-link-text">Email</div>
-            <div class="contact-link-sub"><span class="__cf_email__" data-cfemail="691a1e0819070005470e081f080d0c29061c1d05060602470a0604">[email&#160;protected]</span></div>
+            <div class="contact-link-sub"><span class="__cf_email__" data-cfemail="691a1e0819070005470e081f080d0c29061c1d05060602470a0604">swapnil.gavade@outlook.com</span></div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/swapnilgavade/" class="contact-link" target="_blank" rel="noopener">
@@ -842,9 +842,7 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
 <!-- SCIENCE QUOTE -->
 <div style="background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2rem;text-align:center">
   <div style="max-width:680px;margin:0 auto">
-    <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem">Peer-reviewed wisdom</div>
-    <blockquote style="font-family:var(--font-display);font-size:1.3rem;color:var(--ink);font-style:italic;line-height:1.6;margin-bottom:0.8rem">"In God we trust. All others must bring data."</blockquote>
-    <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink3)">— W. Edwards Deming &nbsp;·&nbsp; <span style="color:var(--accent)">statistician, 1900–1993</span></p>
+  
     <p style="font-size:12px;color:var(--ink3);margin-top:0.6rem;font-weight:300">Verified. Reproducible. p &lt; 0.05.</p>
   </div>
 </div>
