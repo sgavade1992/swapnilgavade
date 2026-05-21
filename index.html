@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swapnil Gavade — Research Data Scientist</title>
+<title>Swapnil Gavade | Research Data Scientist</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
     --ink:#0f1117;--ink2:#3a3d4a;--ink3:#6b7280;
     --bg:#f8f7f3;--bg2:#ffffff;--bg3:#f0ede4;
-    --accent:#1d6a4e;--accent2:#2d9970;--accent3:#e8f5ef;
-    --teal:#0d6e56;--amber:#c17c1a;--coral:#c94a2a;
-    --border:rgba(15,17,23,0.1);
+    --accent:#6b7c3e;--accent2:#8a9d50;--accent3:#f0f2e8;
+    --teal:#5a6b32;--amber:#d4a520;--coral:#c94a2a;
+    --border:rgba(107,124,62,0.12);
     --font-display:'DM Serif Display',serif;
     --font-body:'Outfit',sans-serif;
     --font-mono:'DM Mono',monospace;
@@ -35,7 +35,7 @@
 
   /* HERO */
   .hero{padding:9rem 2rem 5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-  .hero-eyebrow{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem}
+  .hero-eyebrow{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--amber);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem}
   .hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.1;color:var(--ink);margin-bottom:1.5rem}
   .hero h1 em{color:var(--accent);font-style:italic}
   .hero-desc{font-size:1.05rem;color:var(--ink2);line-height:1.75;margin-bottom:2rem;font-weight:300}
@@ -46,7 +46,7 @@
   .btn-outline:hover{background:var(--ink);color:#fff}
   .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   .stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
-  .stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.07)}
+  .stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(107,124,62,0.12)}
   .stat-num{font-family:var(--font-display);font-size:2rem;color:var(--accent);line-height:1}
   .stat-label{font-size:10px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.3rem}
   .stat-sub{font-size:9.5px;color:var(--ink3);margin-top:0.2rem;font-weight:300}
@@ -54,17 +54,17 @@
   /* BOOK BANNER */
   .book-banner{background:var(--ink);color:#fff;padding:3.5rem 2rem}
   .book-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:3rem;flex-wrap:wrap}
-  .book-spine{width:56px;height:80px;background:var(--accent);border-radius:3px 6px 6px 3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:4px 4px 0 rgba(255,255,255,0.05),-2px 0 0 rgba(0,0,0,0.3)}
+  .book-spine{width:56px;height:80px;background:var(--amber);border-radius:3px 6px 6px 3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:4px 4px 0 rgba(255,255,255,0.05),-2px 0 0 rgba(0,0,0,0.3)}
   .book-spine::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:rgba(0,0,0,0.25);border-radius:3px 0 0 3px}
-  .book-spine-text{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--font-mono);font-size:8px;letter-spacing:0.08em;color:rgba(255,255,255,0.8);padding-left:8px}
+  .book-spine-text{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--font-mono);font-size:8px;letter-spacing:0.08em;color:rgba(0,0,0,0.7);padding-left:8px;font-weight:500}
   .book-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:0.5rem}
   .book-title{font-family:var(--font-display);font-size:1.7rem;margin-bottom:0.6rem;color:#fff;font-style:italic}
   .book-desc{font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:620px}
-  .book-badge{background:var(--accent);color:#fff;font-size:11px;font-weight:500;padding:0.35rem 0.9rem;border-radius:3px;display:inline-block;margin-top:1rem;letter-spacing:0.05em}
+  .book-badge{background:var(--amber);color:var(--ink);font-size:11px;font-weight:600;padding:0.35rem 0.9rem;border-radius:3px;display:inline-block;margin-top:1rem;letter-spacing:0.05em}
 
   /* SECTIONS */
   section{padding:5rem 2rem}
-  .section-label{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem}
+  .section-label{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--amber);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem}
   .section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);color:var(--ink);margin-bottom:2.5rem}
   .section-title span{color:var(--accent);font-style:italic}
 
@@ -97,7 +97,7 @@
   /* PROJECTS */
   .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
   .proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s}
-  .proj-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,0.1)}
+  .proj-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(107,124,62,0.15)}
   .proj-vis{height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
   .proj-content{padding:1.25rem}
   .proj-tag{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.4rem}
@@ -111,12 +111,12 @@
   .metric-purple{background:#ede9fe;color:#5b21b6}
 
   /* VIZ BACKGROUNDS */
-  .vis-neural{background:linear-gradient(135deg,#0f2419,#1a3d2e)}
-  .vis-network{background:linear-gradient(135deg,#0c1a2e,#1a2d4a)}
-  .vis-nlp{background:linear-gradient(135deg,#2a1505,#4a2210)}
-  .vis-health{background:linear-gradient(135deg,#0a1f1a,#143028)}
-  .vis-genomics{background:linear-gradient(135deg,#1a0a2e,#2d1a4a)}
-  .vis-genai{background:linear-gradient(135deg,#1a1205,#3a2a0a)}
+  .vis-neural{background:linear-gradient(135deg,#3d4a28,#566b38)}
+  .vis-network{background:linear-gradient(135deg,#3a4528,#4a5a32)}
+  .vis-nlp{background:linear-gradient(135deg,#4a3d28,#5a4d38)}
+  .vis-health{background:linear-gradient(135deg,#2d4228,#3d5a38)}
+  .vis-genomics{background:linear-gradient(135deg,#3d3828,#5a5238)}
+  .vis-genai{background:linear-gradient(135deg,#4a4228,#5a5238)}
 
   /* PUBLICATIONS */
   .pub-list{display:grid;gap:1rem}
@@ -172,7 +172,7 @@
     .hero-stats{grid-template-columns:repeat(2,1fr)}
   }
 </style>
-</head>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></head>
 <body>
 
 <!-- NAVIGATION -->
@@ -236,8 +236,8 @@
 <div class="book-banner" style="overflow:hidden;position:relative;padding:0">
   <canvas id="netCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.18"></canvas>
   <div class="book-inner" style="position:relative;z-index:2;padding:3.5rem 2rem">
-    <div style="width:56px;height:56px;background:var(--accent);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    <div style="width:56px;height:56px;background:var(--amber);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f1117" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
     </div>
     <div>
       <div class="book-tag">Featured Research Contribution · Princeton University Press</div>
@@ -276,12 +276,12 @@
         var dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
         if(d<120){
           ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
-          ctx.strokeStyle='rgba(45,153,112,'+(1-d/120)*0.9+')';
+          ctx.strokeStyle='rgba(212,165,32,'+(1-d/120)*0.9+')';
           ctx.lineWidth=0.6;ctx.stroke();
         }
       }
       ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(45,153,112,0.9)';ctx.fill();
+      ctx.fillStyle='rgba(212,165,32,0.9)';ctx.fill();
     }
     requestAnimationFrame(draw);
   }
@@ -524,7 +524,7 @@
 
       <div class="proj-card" onclick="openModal('neural')" style="cursor:pointer">
         <div class="proj-vis vis-neural">
-          <svg width="260" height="130" viewBox="0 0 260 130"><g opacity="0.65"><circle cx="30" cy="65" r="18" fill="none" stroke="#2d9970" stroke-width="1.5"/><circle cx="80" cy="35" r="14" fill="none" stroke="#2d9970" stroke-width="1"/><circle cx="80" cy="95" r="14" fill="none" stroke="#2d9970" stroke-width="1"/><circle cx="130" cy="22" r="10" fill="none" stroke="#1d6a4e" stroke-width="0.8"/><circle cx="130" cy="65" r="16" fill="#1d6a4e" stroke="none"/><circle cx="130" cy="108" r="10" fill="none" stroke="#1d6a4e" stroke-width="0.8"/><circle cx="185" cy="45" r="12" fill="none" stroke="#2d9970" stroke-width="1"/><circle cx="185" cy="85" r="12" fill="none" stroke="#2d9970" stroke-width="1"/><circle cx="235" cy="65" r="18" fill="#2d9970" stroke="none" opacity="0.8"/><line x1="48" y1="59" x2="66" y2="43" stroke="#2d9970" stroke-width="0.8" opacity="0.5"/><line x1="48" y1="71" x2="66" y2="87" stroke="#2d9970" stroke-width="0.8" opacity="0.5"/><line x1="94" y1="38" x2="120" y2="30" stroke="#1d6a4e" stroke-width="0.8" opacity="0.5"/><line x1="94" y1="92" x2="120" y2="100" stroke="#1d6a4e" stroke-width="0.8" opacity="0.5"/><line x1="146" y1="65" x2="173" y2="51" stroke="#2d9970" stroke-width="1.5" opacity="0.8"/><line x1="146" y1="65" x2="173" y2="79" stroke="#2d9970" stroke-width="1.5" opacity="0.8"/><line x1="197" y1="49" x2="217" y2="61" stroke="#2d9970" stroke-width="1" opacity="0.6"/><line x1="197" y1="81" x2="217" y2="69" stroke="#2d9970" stroke-width="1" opacity="0.6"/></g><text x="130" y="69" text-anchor="middle" fill="#fff" font-size="9" font-family="monospace" font-weight="500">CA1</text><text x="18" y="122" fill="#2d9970" font-size="8" font-family="monospace" opacity="0.8">neural decoding pipeline</text></svg>
+          <canvas id="neuralCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">Neuroscience · ML</div>
@@ -537,7 +537,7 @@
 
       <div class="proj-card" onclick="openModal('network')" style="cursor:pointer">
         <div class="proj-vis vis-network">
-          <canvas id="netCardCanvas" width="260" height="130" style="width:260px;height:130px"></canvas>
+          <canvas id="networkCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">Social Network · NLP · Princeton Press</div>
@@ -550,7 +550,7 @@
 
       <div class="proj-card" onclick="openModal('genai')" style="cursor:pointer">
         <div class="proj-vis vis-genai">
-          <svg width="260" height="130" viewBox="0 0 260 130"><rect x="20" y="35" width="220" height="65" rx="6" fill="none" stroke="#c17c1a" stroke-width="1" opacity="0.6"/><rect x="30" y="50" width="60" height="16" rx="3" fill="#c17c1a" opacity="0.35"/><rect x="100" y="50" width="80" height="16" rx="3" fill="#c17c1a" opacity="0.22"/><rect x="190" y="50" width="35" height="16" rx="3" fill="#c17c1a" opacity="0.15"/><rect x="30" y="74" width="40" height="10" rx="2" fill="#c17c1a" opacity="0.2"/><rect x="78" y="74" width="65" height="10" rx="2" fill="#c17c1a" opacity="0.15"/><rect x="151" y="74" width="50" height="10" rx="2" fill="#c17c1a" opacity="0.12"/><circle cx="130" cy="18" r="10" fill="#c17c1a" opacity="0.85"/><line x1="130" y1="28" x2="130" y2="35" stroke="#c17c1a" stroke-width="2" opacity="0.7"/><text x="126" y="22" fill="#fff" font-size="9" font-family="monospace" font-weight="500">AI</text><text x="18" y="118" fill="#c17c1a" font-size="8" font-family="monospace" opacity="0.8">llama3.2 · fine-tuned · medical research</text></svg>
+          <canvas id="genaiCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">Generative AI · Research Tools</div>
@@ -563,7 +563,7 @@
 
       <div class="proj-card" onclick="openModal('health')" style="cursor:pointer">
         <div class="proj-vis vis-health">
-          <svg width="260" height="130" viewBox="0 0 260 130"><g opacity="0.85"><rect x="18" y="85" width="25" height="32" rx="2" fill="#2d9970" opacity="0.9"/><rect x="53" y="60" width="25" height="57" rx="2" fill="#2d9970" opacity="0.7"/><rect x="88" y="44" width="25" height="73" rx="2" fill="#2d9970" opacity="0.9"/><rect x="123" y="68" width="25" height="49" rx="2" fill="#2d9970" opacity="0.6"/><rect x="158" y="50" width="25" height="67" rx="2" fill="#2d9970" opacity="0.8"/><rect x="193" y="72" width="25" height="45" rx="2" fill="#2d9970" opacity="0.7"/><polyline points="30,83 65,58 100,42 135,66 170,48 205,70" fill="none" stroke="#a7f3d0" stroke-width="2" opacity="0.9"/><circle cx="30" cy="83" r="3.5" fill="#a7f3d0"/><circle cx="65" cy="58" r="3.5" fill="#a7f3d0"/><circle cx="100" cy="42" r="3.5" fill="#a7f3d0"/><circle cx="135" cy="66" r="3.5" fill="#a7f3d0"/><circle cx="170" cy="48" r="3.5" fill="#a7f3d0"/><circle cx="205" cy="70" r="3.5" fill="#a7f3d0"/></g><text x="18" y="16" fill="#2d9970" font-size="8" font-family="monospace" opacity="0.8">500K+ electronic health records</text></svg>
+          <canvas id="healthCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">Healthcare Analytics · EHR · HIPAA</div>
@@ -576,7 +576,7 @@
 
       <div class="proj-card" onclick="openModal('genomics')" style="cursor:pointer">
         <div class="proj-vis vis-genomics">
-          <svg width="260" height="130" viewBox="0 0 260 130"><ellipse cx="85" cy="65" rx="55" ry="45" fill="#7c3aed" opacity="0.15"/><ellipse cx="175" cy="65" rx="55" ry="45" fill="#7c3aed" opacity="0.12"/><g opacity="0.85"><circle cx="55" cy="48" r="3" fill="#a78bfa"/><circle cx="72" cy="73" r="4.5" fill="#a78bfa"/><circle cx="98" cy="52" r="3.5" fill="#a78bfa"/><circle cx="115" cy="44" r="6" fill="#7c3aed"/><circle cx="118" cy="78" r="5" fill="#7c3aed"/><circle cx="142" cy="57" r="3.5" fill="#a78bfa"/><circle cx="160" cy="42" r="3" fill="#a78bfa"/><circle cx="178" cy="75" r="4.5" fill="#a78bfa"/><circle cx="200" cy="58" r="3.5" fill="#a78bfa"/></g><text x="70" y="120" text-anchor="middle" fill="#a78bfa" font-size="7.5" font-family="monospace">single-cell</text><text x="185" y="120" text-anchor="middle" fill="#a78bfa" font-size="7.5" font-family="monospace">spatial</text></svg>
+          <canvas id="genomicsCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">Bioinformatics · Genomics</div>
@@ -589,7 +589,7 @@
 
       <div class="proj-card" onclick="openModal('nlp')" style="cursor:pointer">
         <div class="proj-vis vis-nlp">
-          <svg width="260" height="130" viewBox="0 0 260 130"><g opacity="0.8"><rect x="18" y="22" width="95" height="30" rx="15" fill="#c94a2a" opacity="0.3"/><rect x="48" y="63" width="72" height="24" rx="12" fill="#c94a2a" opacity="0.2"/><rect x="118" y="30" width="108" height="26" rx="13" fill="#c94a2a" opacity="0.4"/><rect x="128" y="67" width="85" height="22" rx="11" fill="#c94a2a" opacity="0.25"/><rect x="18" y="96" width="58" height="20" rx="10" fill="#c94a2a" opacity="0.2"/><rect x="85" y="96" width="88" height="20" rx="10" fill="#c94a2a" opacity="0.35"/><rect x="182" y="97" width="62" height="18" rx="9" fill="#c94a2a" opacity="0.2"/></g><text x="65" y="41" text-anchor="middle" fill="#fca5a5" font-size="9.5" font-family="monospace" font-weight="500">positive</text><text x="84" y="79" text-anchor="middle" fill="#fca5a5" font-size="8.5" font-family="monospace">neutral</text><text x="172" y="46" text-anchor="middle" fill="#fca5a5" font-size="9.5" font-family="monospace" font-weight="500">satisfecho</text><text x="18" y="124" fill="#f87171" font-size="8" font-family="monospace" opacity="0.8">multilingual sentiment · EN + ES · published</text></svg>
+          <canvas id="nlpCanvas" width="320" height="140"></canvas>
         </div>
         <div class="proj-content">
           <div class="proj-tag">NLP · Sentiment Analysis · Published</div>
@@ -700,38 +700,307 @@ function openModal(id) {
   document.getElementById('proj-overlay').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
+
 function closeModal() {
   document.getElementById('proj-overlay').style.display = 'none';
   document.body.style.overflow = '';
 }
+
 document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
 
-// Animated network canvas for card
+// ANIMATION 1: NEURAL DECODING - ECG waveform (swapped with clinical)
 (function(){
-  function initNet(canvasId, w, h){
-    var c = document.getElementById(canvasId);
-    if (!c) return;
-    var ctx = c.getContext('2d');
-    var nodes = [];
-    for (var i=0; i<22; i++){
-      nodes.push({x:Math.random()*w, y:Math.random()*h, vx:(Math.random()-0.5)*0.5, vy:(Math.random()-0.5)*0.5, r:Math.random()*2+1});
-    }
-    function draw(){
-      ctx.clearRect(0,0,w,h);
-      for (var i=0; i<nodes.length; i++){
-        var a=nodes[i]; a.x+=a.vx; a.y+=a.vy;
-        if(a.x<0||a.x>w) a.vx*=-1; if(a.y<0||a.y>h) a.vy*=-1;
-        for (var j=i+1; j<nodes.length; j++){
-          var b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.sqrt(dx*dx+dy*dy);
-          if(d<90){ ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.strokeStyle='rgba(59,130,246,'+(1-d/90)*0.7+')'; ctx.lineWidth=0.7; ctx.stroke(); }
-        }
-        ctx.beginPath(); ctx.arc(a.x,a.y,a.r,0,Math.PI*2); ctx.fillStyle='rgba(96,165,250,0.85)'; ctx.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-    draw();
+  const c = document.getElementById('neuralCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  const waveform = [];
+  for(let i=0; i<w; i++){
+    waveform.push(h/2);
   }
-  initNet('netCardCanvas', 260, 130);
+  let t = 0;
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(61,74,40,0.1)';
+    ctx.fillRect(0,0,w,h);
+    
+    t += 0.05;
+    
+    waveform.shift();
+    const spike = Math.sin(t*2) > 0.95 ? 40 : 0;
+    const baseline = h/2 + Math.sin(t*0.5)*10;
+    waveform.push(baseline - spike);
+    
+    ctx.strokeStyle = 'rgba(212,165,32,0.8)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, waveform[0]);
+    for(let i=1; i<waveform.length; i++){
+      ctx.lineTo(i, waveform[i]);
+    }
+    ctx.stroke();
+    
+    for(let i=0; i<5; i++){
+      const x = 50 + i*60;
+      const y = 30 + Math.random()*80;
+      const size = 3 + Math.sin(t+i)*1;
+      ctx.fillStyle = 'rgba(212,165,32,0.6)';
+      ctx.beginPath();
+      ctx.arc(x, y, size, 0, Math.PI*2);
+      ctx.fill();
+    }
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ANIMATION 2: NETWORK - Pulsing neurons (swapped with neural)
+(function(){
+  const c = document.getElementById('networkCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  const neurons = [];
+  for(let i=0; i<15; i++){
+    neurons.push({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: 3 + Math.random()*4,
+      pulse: Math.random() * Math.PI * 2,
+      pulseSpeed: 0.03 + Math.random()*0.02
+    });
+  }
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(58,69,40,0.08)';
+    ctx.fillRect(0,0,w,h);
+    
+    for(let i=0; i<neurons.length; i++){
+      for(let j=i+1; j<neurons.length; j++){
+        const dx = neurons[i].x - neurons[j].x;
+        const dy = neurons[i].y - neurons[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        
+        if(dist < 100){
+          ctx.strokeStyle = `rgba(212,165,32,${(1-dist/100)*0.4})`;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(neurons[i].x, neurons[i].y);
+          ctx.lineTo(neurons[j].x, neurons[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    
+    neurons.forEach(n => {
+      n.pulse += n.pulseSpeed;
+      const pulseSize = Math.sin(n.pulse) * 2;
+      
+      ctx.fillStyle = `rgba(212,165,32,${0.6 + Math.sin(n.pulse)*0.3})`;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r + pulseSize, 0, Math.PI*2);
+      ctx.fill();
+      
+      ctx.fillStyle = `rgba(232,184,37,${0.4 + Math.sin(n.pulse)*0.4})`;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, (n.r + pulseSize)*0.5, 0, Math.PI*2);
+      ctx.fill();
+    });
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ANIMATION 3: GENAI - Neural network nodes
+(function(){
+  const c = document.getElementById('genaiCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  const layers = [
+    {x: 40, nodes: 5},
+    {x: 120, nodes: 8},
+    {x: 200, nodes: 6},
+    {x: 280, nodes: 3}
+  ];
+  
+  const nodes = [];
+  layers.forEach(layer => {
+    const spacing = h / (layer.nodes + 1);
+    for(let i=0; i<layer.nodes; i++){
+      nodes.push({
+        x: layer.x,
+        y: spacing * (i+1),
+        r: 3,
+        pulse: Math.random() * Math.PI * 2
+      });
+    }
+  });
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(74,66,40,0.08)';
+    ctx.fillRect(0,0,w,h);
+    
+    // Draw connections
+    for(let i=0; i<nodes.length; i++){
+      for(let j=i+1; j<nodes.length; j++){
+        if(Math.abs(nodes[i].x - nodes[j].x) < 100 && Math.abs(nodes[i].x - nodes[j].x) > 50){
+          ctx.strokeStyle = 'rgba(212,165,32,0.15)';
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    
+    // Draw nodes
+    nodes.forEach(n => {
+      n.pulse += 0.03;
+      const brightness = Math.sin(n.pulse) * 0.3 + 0.7;
+      ctx.fillStyle = `rgba(212,165,32,${brightness})`;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ANIMATION 4: HEALTH - Bar charts
+(function(){
+  const c = document.getElementById('healthCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  const bars = [];
+  for(let i=0; i<8; i++){
+    bars.push({ 
+      x: 30 + i*40, 
+      h: 20+Math.random()*60, 
+      target: 20+Math.random()*60 
+    });
+  }
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(45,66,40,0.08)';
+    ctx.fillRect(0,0,w,h);
+    
+    bars.forEach(b => {
+      b.h += (b.target - b.h)*0.02;
+      if(Math.abs(b.h - b.target)<1 && Math.random()>0.98){
+        b.target = 20+Math.random()*60;
+      }
+      ctx.fillStyle = 'rgba(212,165,32,0.6)';
+      ctx.fillRect(b.x-10, h-10-b.h, 20, b.h);
+      
+      ctx.strokeStyle = 'rgba(212,165,32,0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(b.x-10, h-10-b.h, 20, b.h);
+    });
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ANIMATION 5: GENOMICS - DNA helix
+(function(){
+  const c = document.getElementById('genomicsCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  let rotation = 0;
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(61,56,40,0.08)';
+    ctx.fillRect(0,0,w,h);
+    
+    rotation += 0.02;
+    
+    for(let i=0; i<30; i++){
+      const x = 30 + i*10;
+      const angle1 = rotation + i*0.3;
+      const angle2 = angle1 + Math.PI;
+      
+      const y1 = h/2 + Math.sin(angle1)*30;
+      const y2 = h/2 + Math.sin(angle2)*30;
+      
+      ctx.fillStyle = 'rgba(212,165,32,0.6)';
+      ctx.beginPath();
+      ctx.arc(x, y1, 3, 0, Math.PI*2);
+      ctx.fill();
+      
+      ctx.fillStyle = 'rgba(212,165,32,0.6)';
+      ctx.beginPath();
+      ctx.arc(x, y2, 3, 0, Math.PI*2);
+      ctx.fill();
+      
+      if(i % 3 === 0){
+        ctx.strokeStyle = 'rgba(212,165,32,0.3)';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(x, y1);
+        ctx.lineTo(x, y2);
+        ctx.stroke();
+      }
+    }
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ANIMATION 6: NLP - Word clouds
+(function(){
+  const c = document.getElementById('nlpCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const w = 320, h = 140;
+  
+  const words = [];
+  for(let i=0; i<12; i++){
+    words.push({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      size: 8 + Math.random()*8,
+      vx: (Math.random()-0.5)*0.3,
+      vy: (Math.random()-0.5)*0.3,
+      alpha: Math.random()
+    });
+  }
+  
+  function draw(){
+    ctx.fillStyle = 'rgba(74,61,40,0.06)';
+    ctx.fillRect(0,0,w,h);
+    
+    words.forEach(wd => {
+      wd.x += wd.vx;
+      wd.y += wd.vy;
+      if(wd.x<0||wd.x>w) wd.vx *= -1;
+      if(wd.y<0||wd.y>h) wd.vy *= -1;
+      
+      wd.alpha += 0.02;
+      const opacity = Math.sin(wd.alpha) * 0.3 + 0.5;
+      
+      ctx.fillStyle = `rgba(212,165,32,${opacity})`;
+      ctx.font = `${wd.size}px monospace`;
+      ctx.fillText('▪', wd.x, wd.y);
+    });
+    
+    requestAnimationFrame(draw);
+  }
+  draw();
 })();
 </script>
 
