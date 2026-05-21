@@ -815,7 +815,7 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
   draw();
 })();
 
-// ANIMATION 3: GENAI - Neural network nodes
+// ANIMATION 3: GENAI - Neural network with flowing data
 (function(){
   const c = document.getElementById('genaiCanvas');
   if(!c) return;
@@ -842,8 +842,20 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
     }
   });
   
+  // Data particles flowing through network
+  const particles = [];
+  for(let i=0; i<15; i++){
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: 0.8 + Math.random() * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      alpha: Math.random()
+    });
+  }
+  
   function draw(){
-    ctx.fillStyle = 'rgba(74,66,40,0.08)';
+    ctx.fillStyle = 'rgba(74,66,40,0.1)';
     ctx.fillRect(0,0,w,h);
     
     // Draw connections
@@ -860,14 +872,39 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
       }
     }
     
-    // Draw nodes
+    // Draw pulsing nodes
     nodes.forEach(n => {
       n.pulse += 0.03;
       const brightness = Math.sin(n.pulse) * 0.3 + 0.7;
       ctx.fillStyle = `rgba(212,165,32,${brightness})`;
       ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.arc(n.x, n.y, n.r + Math.sin(n.pulse), 0, Math.PI*2);
       ctx.fill();
+    });
+    
+    // Draw flowing particles
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.alpha += 0.02;
+      
+      if(p.x > w){
+        p.x = 0;
+        p.y = Math.random() * h;
+      }
+      
+      // Wave effect
+      p.y += Math.sin(p.x * 0.03 + p.alpha) * 0.3;
+      
+      const opacity = Math.sin(p.alpha) * 0.4 + 0.4;
+      ctx.fillStyle = `rgba(232,184,37,${opacity})`;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 1.5, 0, Math.PI*2);
+      ctx.fill();
+      
+      // Trail
+      ctx.fillStyle = `rgba(232,184,37,${opacity*0.2})`;
+      ctx.fillRect(p.x-6, p.y-0.5, 6, 1);
     });
     
     requestAnimationFrame(draw);
@@ -961,42 +998,79 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModa
   draw();
 })();
 
-// ANIMATION 6: NLP - Word clouds
+// ANIMATION 6: NLP - Animated word cloud with sentiment words
 (function(){
   const c = document.getElementById('nlpCanvas');
   if(!c) return;
   const ctx = c.getContext('2d');
   const w = 320, h = 140;
   
-  const words = [];
-  for(let i=0; i<12; i++){
-    words.push({
-      x: Math.random()*w,
-      y: Math.random()*h,
-      size: 8 + Math.random()*8,
-      vx: (Math.random()-0.5)*0.3,
-      vy: (Math.random()-0.5)*0.3,
-      alpha: Math.random()
-    });
-  }
+  const sentimentWords = [
+    {text: 'positive', size: 14, color: 'rgba(34,197,94,'},
+    {text: 'happy', size: 18, color: 'rgba(34,197,94,'},
+    {text: 'satisfied', size: 16, color: 'rgba(34,197,94,'},
+    {text: 'excellent', size: 12, color: 'rgba(34,197,94,'},
+    {text: 'negative', size: 14, color: 'rgba(239,68,68,'},
+    {text: 'disappointed', size: 13, color: 'rgba(239,68,68,'},
+    {text: 'poor', size: 11, color: 'rgba(239,68,68,'},
+    {text: 'satisfecho', size: 15, color: 'rgba(34,197,94,'},
+    {text: 'feliz', size: 13, color: 'rgba(34,197,94,'},
+    {text: 'malo', size: 12, color: 'rgba(239,68,68,'},
+    {text: 'neutral', size: 11, color: 'rgba(212,165,32,'},
+    {text: 'okay', size: 10, color: 'rgba(212,165,32,'}
+  ];
+  
+  const words = sentimentWords.map(sw => ({
+    ...sw,
+    x: Math.random() * w,
+    y: Math.random() * h,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    alpha: Math.random(),
+    rotationSpeed: (Math.random() - 0.5) * 0.01
+  }));
   
   function draw(){
-    ctx.fillStyle = 'rgba(74,61,40,0.06)';
+    ctx.fillStyle = 'rgba(74,61,40,0.08)';
     ctx.fillRect(0,0,w,h);
     
-    words.forEach(wd => {
-      wd.x += wd.vx;
-      wd.y += wd.vy;
-      if(wd.x<0||wd.x>w) wd.vx *= -1;
-      if(wd.y<0||wd.y>h) wd.vy *= -1;
+    words.forEach(word => {
+      word.x += word.vx;
+      word.y += word.vy;
+      word.alpha += 0.015;
       
-      wd.alpha += 0.02;
-      const opacity = Math.sin(wd.alpha) * 0.3 + 0.5;
+      // Bounce off edges
+      if(word.x < 0 || word.x > w - word.text.length * word.size * 0.6) word.vx *= -1;
+      if(word.y < word.size || word.y > h - 5) word.vy *= -1;
       
-      ctx.fillStyle = `rgba(212,165,32,${opacity})`;
-      ctx.font = `${wd.size}px monospace`;
-      ctx.fillText('▪', wd.x, wd.y);
+      // Pulsing opacity
+      const opacity = (Math.sin(word.alpha) * 0.25 + 0.65);
+      
+      ctx.save();
+      ctx.translate(word.x, word.y);
+      ctx.font = `${word.size}px Arial`;
+      ctx.fillStyle = word.color + opacity + ')';
+      ctx.fillText(word.text, 0, 0);
+      ctx.restore();
     });
+    
+    // Draw connecting lines between nearby words
+    for(let i = 0; i < words.length; i++){
+      for(let j = i + 1; j < words.length; j++){
+        const dx = words[i].x - words[j].x;
+        const dy = words[i].y - words[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if(dist < 80){
+          ctx.strokeStyle = `rgba(212,165,32,${(1 - dist/80) * 0.15})`;
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(words[i].x, words[i].y);
+          ctx.lineTo(words[j].x, words[j].y);
+          ctx.stroke();
+        }
+      }
+    }
     
     requestAnimationFrame(draw);
   }
