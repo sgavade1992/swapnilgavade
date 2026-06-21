@@ -314,25 +314,86 @@ a{color:inherit;text-decoration:none}
       <div class="card">
         <div class="ctitle">🫀 HR Zones — Your Targets</div>
         <div style="display:flex;flex-direction:column;gap:0">
-          ${[['Z1','< 112 bpm','Recovery / walk','#6b7cff',15],['Z2','112–131 bpm','YOUR FOCUS — base building','var(--blue)',50],['Z3','132–150 bpm','Tempo / threshold','var(--green)',65],['Z4','151–168 bpm','Race / intervals','var(--orange)',80],['Z5','169–187 bpm','Max — short bursts','var(--red)',100]].map(([z,r,d,c,p])=>`
           <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.75rem">
-            <div style="width:7px;height:7px;border-radius:50%;background:${c};flex-shrink:0"></div>
-            <span style="font-weight:700;min-width:20px;color:${c}">${z}</span>
-            <span style="min-width:88px;color:var(--m2)">${r}</span>
-            <span style="flex:1;color:var(--m1);font-size:.68rem">${d}</span>
-            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:${p}%;background:${c};border-radius:99px"></div></div>
-          </div>`).join('')}
+            <div style="width:7px;height:7px;border-radius:50%;background:#6b7cff;flex-shrink:0"></div>
+            <span style="font-weight:700;min-width:20px;color:#6b7cff">Z1</span>
+            <span style="min-width:88px;color:var(--m2)">< 112 bpm</span>
+            <span style="flex:1;color:var(--m1);font-size:.68rem">Recovery / walk</span>
+            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:15%;background:#6b7cff;border-radius:99px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.75rem">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0"></div>
+            <span style="font-weight:700;min-width:20px;color:var(--blue)">Z2</span>
+            <span style="min-width:88px;color:var(--m2)">112–131 bpm</span>
+            <span style="flex:1;color:var(--m1);font-size:.68rem">YOUR FOCUS — base building</span>
+            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:50%;background:var(--blue);border-radius:99px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.75rem">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+            <span style="font-weight:700;min-width:20px;color:var(--green)">Z3</span>
+            <span style="min-width:88px;color:var(--m2)">132–150 bpm</span>
+            <span style="flex:1;color:var(--m1);font-size:.68rem">Tempo / threshold</span>
+            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:65%;background:var(--green);border-radius:99px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.75rem">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--orange);flex-shrink:0"></div>
+            <span style="font-weight:700;min-width:20px;color:var(--orange)">Z4</span>
+            <span style="min-width:88px;color:var(--m2)">151–168 bpm</span>
+            <span style="flex:1;color:var(--m1);font-size:.68rem">Race / intervals</span>
+            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:80%;background:var(--orange);border-radius:99px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.75rem">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0"></div>
+            <span style="font-weight:700;min-width:20px;color:var(--red)">Z5</span>
+            <span style="min-width:88px;color:var(--m2)">169–187 bpm</span>
+            <span style="flex:1;color:var(--m1);font-size:.68rem">Max — short bursts</span>
+            <div style="min-width:55px;background:var(--b1);border-radius:99px;height:4px"><div style="height:100%;width:100%;background:var(--red);border-radius:99px"></div></div>
+          </div>
         </div>
       </div>
       <div class="card">
         <div class="ctitle">🎯 Men's Open Race Specs</div>
         <div style="display:flex;flex-direction:column;gap:0">
-          ${[['SkiErg','1,000 m','—'],['Sled Push','50 m (4×12.5m)','102 kg'],['Sled Pull','50 m (4×12.5m)','102 kg'],['Burpee Broad Jumps','80 m','BW'],['Row','1,000 m','—'],["Farmer's Carry",'200 m','2×24 kg'],['Sandbag Lunges','100 m','20 kg'],['Wall Balls','100 reps','6 kg']].map(([n,d,w])=>`
           <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
-            <span>${n}</span>
-            <span style="color:var(--accent);font-weight:700">${d}</span>
-            <span style="color:var(--m2);font-size:.7rem">${w}</span>
-          </div>`).join('')}
+            <span>SkiErg</span>
+            <span style="color:var(--accent);font-weight:700">1,000 m</span>
+            <span style="color:var(--m2);font-size:.7rem">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Sled Push</span>
+            <span style="color:var(--accent);font-weight:700">50 m (4×12.5m)</span>
+            <span style="color:var(--m2);font-size:.7rem">102 kg</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Sled Pull</span>
+            <span style="color:var(--accent);font-weight:700">50 m (4×12.5m)</span>
+            <span style="color:var(--m2);font-size:.7rem">102 kg</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Burpee Broad Jumps</span>
+            <span style="color:var(--accent);font-weight:700">80 m</span>
+            <span style="color:var(--m2);font-size:.7rem">BW</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Row</span>
+            <span style="color:var(--accent);font-weight:700">1,000 m</span>
+            <span style="color:var(--m2);font-size:.7rem">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Farmer's Carry</span>
+            <span style="color:var(--accent);font-weight:700">200 m</span>
+            <span style="color:var(--m2);font-size:.7rem">2×24 kg</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Sandbag Lunges</span>
+            <span style="color:var(--accent);font-weight:700">100 m</span>
+            <span style="color:var(--m2);font-size:.7rem">20 kg</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--b1);font-size:.78rem;align-items:center">
+            <span>Wall Balls</span>
+            <span style="color:var(--accent);font-weight:700">100 reps</span>
+            <span style="color:var(--m2);font-size:.7rem">6 kg</span>
+          </div>
         </div>
       </div>
     </div>
@@ -436,9 +497,56 @@ let wkDone = LS('hx_wkd', {});
 let exNotes = LS('hx_notes', {});
 let lastScreen = LS(LAST_SCREEN_KEY, 'dashboard');
 let programFilter = LS(LAST_FILTER_KEY, 'training');
+const API_ROOT = '/api';
 
 function persist(){ LSSet('hx_logs',logs); LSSet('hx_wkd',wkDone); LSSet('hx_notes',exNotes); LSSet(LAST_SCREEN_KEY, lastScreen); LSSet(LAST_FILTER_KEY, programFilter); }
 window.addEventListener('beforeunload', persist);
+
+async function loadLogs(){
+  try {
+    const response = await fetch(`${API_ROOT}/logs`);
+    if(!response.ok) throw new Error(`Failed fetching logs: ${response.status}`);
+    const data = await response.json();
+    if(Array.isArray(data)){
+      logs = data;
+      persist();
+    }
+  } catch(err){
+    console.warn('Unable to load logs from backend:', err);
+    logs = LS('hx_logs', []);
+  }
+}
+
+async function postLog(entry){
+  try {
+    const response = await fetch(`${API_ROOT}/logs`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(entry)
+    });
+    if(!response.ok) throw new Error(`Save failed: ${response.status}`);
+    const saved = await response.json();
+    logs.unshift(saved);
+    persist();
+    renderLog();
+    return saved;
+  } catch(err){
+    console.warn('Backend save failed, using local cache:', err);
+    logs.unshift(entry);
+    persist();
+    renderLog();
+    return entry;
+  }
+}
+
+async function deleteLogEntry(id){
+  try {
+    const response = await fetch(`${API_ROOT}/logs/${id}`, {method: 'DELETE'});
+    if(!response.ok) throw new Error(`Delete failed: ${response.status}`);
+  } catch(err){
+    console.warn('Backend delete failed:', err);
+  }
+}
 
 // ════════════════════════════════════════════════════════════
 // UTILS
@@ -1198,11 +1306,13 @@ function renderDashboard(){
     [avgEffort?avgEffort.toFixed(1):'—','Avg Effort','var(--orange)'],
     [currentWeek,'Current Week','var(--purple)'],
   ].map(([v,l,c])=>`<div class="stat-mini"><div class="stat-mini-val" style="color:${c}">${v}</div><div class="stat-mini-lbl">${l}</div></div>`).join('');
+  const lastSummary = last
+    ? `<strong>${last.type}</strong> on ${new Date(last.date).toLocaleDateString()}${last.dist ? ` · ${last.dist} mi` : ''}${last.dur ? ` · ${last.dur} min` : ''}`
+    : 'No sessions logged yet. Start with a run, strength session, or HYROX practice.';
   dashSummary.innerHTML = `
     <div class="ctitle">Latest Activity</div>
     <div style="font-size:.88rem;color:var(--text);margin-bottom:12px">
-      ${last ? `<strong>${last.type}</strong> on ${new Date(last.date).toLocaleDateString()}${last.dist?` · ${last.dist} mi`:'}${last.dur?` · ${last.dur} min`:''}
-        ` : 'No sessions logged yet. Start with a run, strength session, or HYROX practice.'}
+      ${lastSummary}
     </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap">
       <div style="flex:1;min-width:180px;background:var(--panel2);border:1px solid var(--b1);border-radius:12px;padding:14px">
@@ -1482,17 +1592,16 @@ function renderLog(){
     : '<div style="text-align:center;padding:40px 0;color:var(--m1)">No sessions logged yet</div>';
 }
 
-function saveLog(){
+async function saveLog(){
   const g = id => document.getElementById(id).value;
   const entry = {id:Date.now(),type:g('fType'),date:g('fDate'),dist:g('fDist'),dur:g('fDur'),hr:g('fHR'),cad:g('fCad'),effort:g('fEffort'),weight:g('fWeight'),notes:g('fNotes')};
   if(!entry.dist&&!entry.dur&&!entry.hr){ toast('Add at least one metric'); return; }
-  logs.unshift(entry); persist();
+  await postLog(entry);
   ['fDist','fDur','fHR','fCad','fEffort','fWeight','fNotes'].forEach(id=>document.getElementById(id).value='');
   toast('✅ Session saved!');
-  renderLog();
 }
 
-function delLog(id){ if(!confirm('Delete?'))return; logs=logs.filter(l=>l.id!==id); persist(); renderLog(); toast('Deleted'); }
+async function delLog(id){ if(!confirm('Delete?'))return; await deleteLogEntry(id); logs=logs.filter(l=>l.id!==id); persist(); renderLog(); toast('Deleted'); }
 
 function exportCSV(){
   if(!logs.length){toast('No sessions');return;}
@@ -1517,13 +1626,13 @@ function openModal(){
 function closeModal(){ document.getElementById('modalBg').classList.remove('open'); }
 document.getElementById('modalBg').addEventListener('click',e=>{ if(e.target===e.currentTarget)closeModal(); });
 
-function saveModalLog(){
+async function saveModalLog(){
   const g = id => document.getElementById(id).value;
   const entry = {id:Date.now(),type:g('mfType'),date:g('mfDate'),dist:g('mfDist'),dur:g('mfDur'),hr:g('mfHR'),cad:g('mfCad'),effort:g('mfEffort'),weight:g('mfWeight'),notes:g('mfNotes')};
   if(!entry.dist&&!entry.dur&&!entry.hr){ toast('Add at least one metric'); return; }
-  logs.unshift(entry); persist(); closeModal(); toast('✅ Session saved!');
+  await postLog(entry);
+  closeModal(); toast('✅ Session saved!');
   ['mfDist','mfDur','mfHR','mfCad','mfEffort','mfWeight','mfNotes'].forEach(id=>document.getElementById(id).value='');
-  renderLog();
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1531,7 +1640,7 @@ function saveModalLog(){
 // ════════════════════════════════════════════════════════════
 viewWeek = getWeek();
 viewDay  = new Date().getDay();
-nav(lastScreen);
+loadLogs().finally(()=>nav(lastScreen));
 </script>
 </body>
 </html>
